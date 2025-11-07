@@ -150,3 +150,7 @@ WHERE animalid = (
     FROM animals
     WHERE name = 'Simba' AND species = 'Cat'
 );
+
+UPDATE doctors
+SET dlastname = 'Reyes-Gonzales'
+WHERE dfirstname = 'Sofia';
