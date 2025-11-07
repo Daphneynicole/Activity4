@@ -52,3 +52,15 @@ CREATE TABLE invoices(
     REFERENCES doctors(doctorid), 
     FOREIGN KEY (petid) 
     REFERENCES pets(petid) );
+
+    CREATE TABLE medicalrecords(
+    recordid INT PRIMARY KEY,
+    animalid INT,
+    doctorid INT,
+    visitdate DATE,
+    diagnosis VARCHAR(255),
+    treatment VARCHAR(255),
+    notes TEXT,
+    FOREIGN KEY (animalid) REFERENCES animals(animalid),
+    FOREIGN KEY (doctorid) REFERENCES doctorid(doctorid)
+    );
