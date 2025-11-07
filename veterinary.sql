@@ -125,7 +125,7 @@ VALUES
     (8, 8, 150.00, '16:30:00'),
     (9, 9, 60.00, '14:45:00'),
     (10, 10, 40.00, '11:30:00');
-    
+
 INSERT INTO medicalrecords (recordid, animalid, recorddate, doctorid, diagnosis, prescription, notes)
 VALUES 
     (1, 1, '2023-01-05 00:00:00', 1, 'Health check', 'N/A', 'Regular checkup, no issue detected'),
@@ -140,4 +140,7 @@ VALUES
     (10, 10, '2023-05-20 00:00:00', 6, 'Conjunctivitis', 'Eye drops', 'Prescribed eye drops for conjunctivitis');
 
     ALTER TABLE owners ADD COLUMN registereddate DATE;
+
+    ALTER TABLE invoices
+RENAME COLUMN paymentdate TO paymenttime;
 
