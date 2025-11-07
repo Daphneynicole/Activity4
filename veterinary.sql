@@ -38,3 +38,17 @@ CREATE TABLE doctors(
     phone VARCHAR(15),
     email VARCHAR(100)
 );
+
+CREATE TABLE invoices( 
+    invoiceid INT PRIMARY KEY, 
+    ownerid INT, 
+    doctorid INT, 
+    petid INT, 
+    amount DECIMAL(10,2), 
+    invoice_date DATE, 
+    FOREIGN KEY (ownerid) 
+    REFERENCES owners(ownerid), 
+    FOREIGN KEY (doctorid) 
+    REFERENCES doctors(doctorid), 
+    FOREIGN KEY (petid) 
+    REFERENCES pets(petid) );
